@@ -23,7 +23,7 @@
 			{{ $premium := has .privileges 8388615 }}
 			{{ $admin  := has .privileges 7262715 }}
 			{{ $chatmod  := has .privileges 786499 }}
-			{{ $qat  := has .privileges 267 }}
+			{{ $bn  := has .privileges 267 }}
 			
 			{{ if hasAdmin $global.Context.User.Privileges }}
 				{{ $restr := not (has .privileges 1) }}
@@ -183,9 +183,9 @@
 								{{ $global.T "<b>%s</b> " .username | html }}
 								 is a <i class="blue star small icon"></i><b>Chat Mod</b> 
 								{{ $global.T " from <b>%s</b>." (country .country true) | html }}
-								{{else if $qat}}
+								{{else if $bn}}
 								{{ $global.T "<b>%s</b> " .username | html }}
-								 is a <i class="orange universal access small icon"></i><b>QAT</b> 
+								 is a <i class="orange universal access small icon"></i><b>Nominator</b> 
 								{{ $global.T " from <b>%s</b>." (country .country true) | html }}
 								{{else if $premium}}
 								{{ $global.T "<b>%s</b> " .username | html }}
