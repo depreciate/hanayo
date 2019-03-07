@@ -22,10 +22,10 @@ KyutGrill=coolhome.jpg
 		<div class="ui segment">
 			<h1 class="ui header">{{ .T "Welcome to Akatsuki." }}</h1>
 			<p>
-				{{ .T "You look new here. Allow us to introduce you to what Akatsuki is." }}
+				{{ .T "You look new here. Allow us to introduce you to osu!Akatsuki." }}
 			</p>
 			<p>
-				{{ .T "Akatsuki is an osu! private server, featuring both relax and 'vanilla' osu!, both integrated into a single server. Each with their own individual PP system, pp-sorted leaderboards, pp > score submission, fully-functioning multiplayer and spectator, and a massive dedicated community between both the osu! server and the discord. <b>we currently have %s users online and %s registered users!</b>" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
+				{{ .T "Welcome to osu!Akatsuki. We are an osu! private server featuring both relax and vanilla osu!, integrated into a single server. Each 'mode' has it's own individual PP system, pp/score-sorted leaderboards, fully-functioning multiplayer and spectation, and a massive dedicated community between both the osu! and discord servers. <b>we currently have %s users online and %s registered users!</b>" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
 			</p>
 			<h3 class="ui header center aligned">{{ .T "What are you waiting for? Join Akatsuki! It's risk-free: you won't get your account banned on the official server if you play on Akatsuki.<br>You can also switch anytime between the official osu! server and Akatsuki" | html }}</h3>
 		</div>
@@ -39,7 +39,7 @@ KyutGrill=coolhome.jpg
 		<div class="ui segment">
 			<h1 class="ui header">{{ .T "Hi, %s!" .Context.User.Username }}</h1>
 			<p>
-				{{ .T "Welcome back to Akatsuki. We currently have <b>%s online users and %s total registed users.</b> Hope you're having a wonderful day!" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
+				{{ .T "Welcome back to osu!Akatsuki. We currently have <b>%s online users and %s total registed users.</b> Hope you're having a wonderful day!" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
 			</p>
 		</div>
 	{{ end }}
