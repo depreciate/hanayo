@@ -5,22 +5,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="description"               content="Welcome to osu!Akatsuki. We are an osu! private server featuring both relax and vanilla osu!, integrated into a single server. Each 'mode' has it's own individual PP system, pp/score-sorted leaderboards, fully-functioning multiplayer and spectation, and many other neat and unique features."/>
-		<meta name="keywords"                  content="osu, osu private server, osu server, private server, akatsuki, relax server, osu!, flyingtuna, cookiezi, willcookie, vaxei, howlwater, godmode">
+		<meta name="description"               content="Welcome to cmyu!. We are an osu! private server featuring both relax and vanilla osu!, integrated into a single server. Each 'mode' has it's own individual PP system, pp/score-sorted leaderboards, fully-functioning multiplayer and spectation, and many other neat and unique features."/>
+		<meta name="keywords"                  content="osu, osu private server, osu server, private server, cmyu!, relax server, osu!, flyingtuna, cookiezi, willcookie, vaxei, howlwater, godmode">
 		<meta name="author"                    content="cmyui"/>
 		<meta name="theme-color"               content="#36d169"/>
 		<meta name="color"                     content="#36d169"/>
 
 		<meta property="og:url"                content="https://akatsuki.pw/"/>
 		<meta property="og:type"               content="website"/>
-		<meta property="og:title"              content="{{ if .TitleBar }}{{ .T .TitleBar }} - {{ end }}osu!Akatsuki"/>
-		<meta property="og:description"        content="Welcome to osu!Akatsuki!"/> 
+		<meta property="og:title"              content="{{ if .TitleBar }}{{ .T .TitleBar }} - {{ end }}cmyu!"/>
+		<meta property="og:description"        content="Welcome to cmyu!"/> 
 		<meta property="og:image"              content="https://akatsuki.pw/static/logos/logo1.png"/>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>{{ if .TitleBar }}{{ .T .TitleBar }} - {{ end }}Akatsuki</title>
+		<title>{{ if .TitleBar }}{{ .T .TitleBar }} - {{ end }}cmyu!</title>
 
 		<link rel="stylesheet" type="text/css" href="/static/{{ if $ds }}dark/{{ end }}semantic.min.css?{{ unixNano }}">
 		<link rel="stylesheet" type="text/css" href="/static/ripple.css?{{ unixNano }}">
@@ -52,7 +52,7 @@
 				<noscript>Research has proven this website works (probably) more than 7% better if you have JavaScript enabled.</noscript>
 				{{ if and .Context.User.Username (not (has .Context.User.Privileges 1)) }}
 					<div class="ui warning message">
-						{{ $.T "Your account is currently in restricted mode. You will not be able to perform certain actions, and your profile can only be seen by you and by Akatsuki's staff. If you believe this was a mistake, or have waited more than 2 months since your latest offense, you may appeal using <a href='https://goo.gl/forms/qDBIMgcvpFLWCNwf2'>this form</a>." | html }}
+						{{ $.T "Your account is currently in restricted mode. You will not be able to perform certain actions, and your profile can only be seen by you and by cmyu!'s staff. If you believe this was a mistake, or have waited more than 2 months since your latest offense, you may appeal using <a href='https://goo.gl/forms/qDBIMgcvpFLWCNwf2'>this form</a>." | html }}
 					</div>
 				{{ end }}
 				{{ if .Messages }}
@@ -71,12 +71,12 @@
 				{{ end }}
 				{{ with $settings.game_maintenance.Int }}
 					<div class="ui warning message">
-						{{ $.T "Akatsuki's score submission is currently in maintenance mode. You will not be able to submit scores for the time being." }}
+						{{ $.T "cmyu!'s score submission is currently in maintenance mode. You will not be able to submit scores for the time being." }}
 					</div>
 				{{ end }}
 				{{ with $settings.website_maintenance.Int }}
 					<div class="ui warning message">
-						{{ $.T "Akatsuki's website is currently in maintenance mode. Only staff are able to access the full website." }}
+						{{ $.T "cmyu!'s website is currently in maintenance mode. Only staff are able to access the full website." }}
 					</div>
 				{{ end }}
 				
@@ -110,10 +110,10 @@
 		</script>
 
 		<div class="footer">
-			{{ .T "&copy; 2017 - %d Ripple, Akatsuki, using Hanayo %s." (curryear) (version) | html }}
+			{{ .T "&copy; 2017 - %d Ripple, cmyu!, using Hanayo %s." (curryear) (version) | html }}
 			<a href="/team" title="{{ .T "Who is working on this thing?" }}"><i class="users icon"></i>{{ .T "Team" }}</a> |
 			<!--a href="/changelog" title="{{ .T "See what changed!" }}"><i class="bug icon"></i>{{ .T "Changelog" }}</a> | -->
-			<a href="https://p.datadoghq.com/sb/71577ef74-a079587e79" title="{{ .T "Akatsuki's Server Status" }}"><i class="signal icon"></i>{{ .T "Status" }}</a> |
+			<a href="https://p.datadoghq.com/sb/71577ef74-a079587e79" title="{{ .T "cmyu!'s Server Status" }}"><i class="signal icon"></i>{{ .T "Status" }}</a> |
 			<div class="ui scrolling dropdown" style="margin-left: 5px;" id="language-selector">
 				{{ $lang := .Context.Language }}
 				{{ with $lang }}
