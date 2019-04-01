@@ -19,13 +19,11 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<iframe src="static/music/audio.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+
 		<audio autoplay loop>
-		<source src="static/music/audio.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
+			<source src="static/music/audio.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
 		</audio>
-		</iframe>
 
 		<title>{{ if .TitleBar }}{{ .T .TitleBar }} - {{ end }}cmyu!</title>
 
